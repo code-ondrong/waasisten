@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth Redirect</title>
+</head>
+<body>
+    <h2>Authentication Successful</h2>
+    <p>You may close this window.</p>
+
+    <script>
+        // Optional: forward code to opener window
+        if (window.opener) {
+            window.opener.postMessage(window.location.href, "*");
+            window.close();
+        }
+    </script>
+</body>
+</html>
